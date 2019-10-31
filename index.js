@@ -11,7 +11,7 @@ class Model {
   filterSearch(value) {
     let filteredUsers = [];
     filteredUsers = this.users.filter((user) => {
-      return user.name.toLowerCase().indexOf(value) > -1;
+      return user.name.toLowerCase().indexOf(value.toLowerCase()) > -1;
     })
     this.onUserListChanged(filteredUsers);
   }
