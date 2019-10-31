@@ -90,7 +90,10 @@ class View {
         } 
 
         if(!user.show) {
-          li.innerHTML = "";
+           while (li.firstChild) {
+          li.removeChild(li.firstChild);
+          }
+
           li.append(name);
         }
       })
